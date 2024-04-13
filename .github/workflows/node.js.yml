@@ -34,6 +34,8 @@ jobs:
         node-version: 20.x
         cache: 'npm'
     - run: npm install
+    - name: Install OS support
+      run: npx playwright install
     - run: npm start &
     - run: npm run test:ui
     - run: echo "Simeon2345"
